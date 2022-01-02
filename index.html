@@ -93,13 +93,18 @@
             background:  bidi-override;
             height: 400px; /*固定圖片大小*/
             overflow: hidden;
-          }  	 
+          } 
+		.pixent-image{
+            background:  bidi-override;
+            height: 200px; /*固定圖片大小*/
+            overflow: hidden;
+          }  		  
 		</style>
       
 		<div class="row"  id="demo">
 		</div>
 		<div class="divcss5" style="background-color:#555454>
-			<div class="combon">
+			<div class="combon" align="center">
 				<h3>更多推薦電影</h3>
 			</div>
 			<div class="row"  id="pixnet-stuff"></div>
@@ -156,7 +161,7 @@
 		 text = text + '	<div class="card">';
 		 text = text + '		<div class="card-image">';
 		 text = text + '			<a href="https://lll1237html.netlify.app/test?id='+i+'"><img src="'+data.getFormattedValue(i,0)+'" width="100%">';
-		 text = text + '     		<span class="card-title, font-size:20px" style="height:2em; padding:16px 16px;"><font face="Vujahday Script" color="white" align="center">'+data.getFormattedValue(i,1)+'</span>';
+		 text = text + '     		<span class="card-title, font-size:20px" style="height:2em; padding:16px 16px; background-color:black"><font face="Vujahday Script" color="white" align="center">'+data.getFormattedValue(i,1)+'</span>';
 		 text = text + '		</div> ';
 		 text = text + '  	</div> ';
 		 text = text + '</div> ';
@@ -192,18 +197,18 @@
 		<footer class="page-footer">
 		<div class="container">
 			<div class="row">
-				<div class="center">
-					<form name="form1" action="javascript:formresponse();" style="background-color:#FFD306;">
-						留言: <br><input type="text" name="dcard" style="color:black"><br />
+				<div class="center;">
+					<form name="form1" action="javascript:formresponse();">
+						留言: <br><input type="text" name="dcard"><br />
 						<input type="submit" value="Submit">
 					</form>
 				</div>
 				<div class="center">
-					<h5 class="white-text">Links</h5>
+					<h5 class="card-panel teal lighten-2">Links</h5>
 					<ul>
-						<li><a class="grey-text text-lighten-3" href="https://movie.douban.com/" target="_blank">record for chat</a></li>
-						<li><a class="grey-text text-lighten-3" href="https://docs.google.com/spreadsheets/d/19IQXAENU4BEnj5TrJ9s_4pI5tYq26jHftEuoZwP2D98/edit#gid=0" target="_blank">database</a></li>
-						<li><a class="grey-text text-lighten-3" href="https://docs.google.com/spreadsheets/d/1w3sCX2bKNqC46lXlh5Hpv4_RgsuMoouXnb2fSRUx0Jo/edit?resourcekey#gid=1167725145" target="_blank">blogger</a></li>
+						<li><a class="card-panel teal lighten-2" href="https://movie.douban.com/" target="_blank">record for chat</a></li>
+						<li><a class="card-panel teal lighten-2" href="https://docs.google.com/spreadsheets/d/19IQXAENU4BEnj5TrJ9s_4pI5tYq26jHftEuoZwP2D98/edit#gid=0" target="_blank">database</a></li>
+						<li><a class="card-panel teal lighten-2" href="https://docs.google.com/spreadsheets/d/1w3sCX2bKNqC46lXlh5Hpv4_RgsuMoouXnb2fSRUx0Jo/edit?resourcekey#gid=1167725145" target="_blank">blogger</a></li>
 					</ul>
 				</div>
 			</div>
