@@ -94,11 +94,11 @@
             height: 400px; /*固定圖片大小*/
             overflow: hidden;
           } 
-		<!--.pixent-image{
+		.pixent-image{
             background:  bidi-override;
             height: 150px; /*固定圖片大小*/
             overflow: hidden;
-          } --> 		  
+          } 		  
 		</style>
       
 		<div class="row"  id="demo">
@@ -173,18 +173,18 @@
 		
 		function myFunction(arr) {
 		
-			var data = arr.articles;
+			var datx = arr.articles;
 			var out = "";
 			var i;
-			for (i = 0; i < data.length; i++) {
-				if ( data[i].thumb != "" )
+			for (i = 0; i < datx.length; i++) {
+				if ( datx[i].thumb != "" )
 				{
 					out = out + '<div class="col s1 m3 l3" style="height:200px; border:1px #F0F0F0 dashed; ">';
 					out = out + ' <div class="pixnet" >';
 					out = out + '   <div class="pixnet-image">';
-					if ( data[i].thumb != "" ) out += '<img src="' + data[i].thumb + '" style="display:block; margin:auto;"/>';
-					if ( data[i].title != "" ) out += '<p style="font-size:5px"><a href="' + data[i].link + '" target="_blank">' + data[i].title + '</a></p>';
-					if ( data[i].address != undefined ) out += '<p><a href="https://www.google.com.tw/maps?daddr=' + data[i].address + '" target="_blank">' + data[i].address + '</a></p>';
+					if ( data[i].thumb != "" ) out += '<img src="' + datx[i].thumb + '" style="display:block; margin:auto;"/>';
+					if ( data[i].title != "" ) out += '<p style="font-size:5px"><a href="' + datx[i].link + '" target="_blank">' + datx[i].title + '</a></p>';
+					if ( data[i].address != undefined ) out += '<p><a href="https://www.google.com.tw/maps?daddr=' + datx[i].address + '" target="_blank">' + datx[i].address + '</a></p>';
 					<!--out += '<p> </p>';
 					<!--out += '<br /><br /><br />';
 					out = out + '   </div> ';
