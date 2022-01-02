@@ -57,7 +57,7 @@
 		xmlhttp.open("GET", url, true);
 		xmlhttp.send();		
 		</script>
-		<script type="text/javascript" src="js/materialize.min.js"></script>-->  
+		<!--<script type="text/javascript" src="js/materialize.min.js"></script>-->  
     </head>
 
     <body>
@@ -182,9 +182,9 @@
 					out = out + '<div class="col s1 m3 l3" style="height:200px; border:1px #F0F0F0 dashed; ">';
 					out = out + ' <div class="pixnet" >';
 					out = out + '   <div class="pixnet-image">';
-					if ( data[i].thumb != "" ) out += '<img src="' + datx[i].thumb + '" style="display:block; margin:auto;"/>';
-					if ( data[i].title != "" ) out += '<p style="font-size:5px"><a href="' + datx[i].link + '" target="_blank">' + datx[i].title + '</a></p>';
-					if ( data[i].address != undefined ) out += '<p><a href="https://www.google.com.tw/maps?daddr=' + datx[i].address + '" target="_blank">' + datx[i].address + '</a></p>';
+					if ( datx[i].thumb != "" ) out += '<img src="' + datx[i].thumb + '" style="display:block; margin:auto;"/>';
+					if ( datx[i].title != "" ) out += '<p style="font-size:5px"><a href="' + datx[i].link + '" target="_blank">' + datx[i].title + '</a></p>';
+					if ( datx[i].address != undefined ) out += '<p><a href="https://www.google.com.tw/maps?daddr=' + datx[i].address + '" target="_blank">' + datx[i].address + '</a></p>';
 					<!--out += '<p> </p>';
 					<!--out += '<br /><br /><br />';
 					out = out + '   </div> ';
