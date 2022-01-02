@@ -74,7 +74,6 @@
 	{
         background:  bidi-override;
 		weight:50%;
-        height: 500px; /*固定圖片大小*/
         overflow: hidden;
     } 
 	font-family: 'Island Moments', cursive;
@@ -85,7 +84,7 @@
 		<div id="titles" style="text-align:center"></div>
 		<p id="tests" class="sizes" style="color:white;"></p>
 		<div id="links" align="center" ></div>
-		<div id="map" style="text-align:center;color:white"><font face="Island Moments" style="font-size:50px" align="center"></font></div>
+		<div id="map" style="text-align:center; font-size:28px"></div>
 		<div id='maplink' class="center"></div>
 		<!--<script> 
 		<!-- 表單的部分 ->
@@ -118,7 +117,7 @@
 			document.getElementById("titles").innerHTML = '<font face="Island Moments" style="font-size:40px" align="center" color="white">'+data.getFormattedValue(num,1)+'</font>';
 			document.getElementById("tests").innerHTML = data.getFormattedValue(num,2);
 			document.getElementById("links").innerHTML='<iframe width="560" height="315" src="'+data.getFormattedValue(num,3)+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>';
-			document.getElementById("map").innerHTML= data.getFormattedValue(num,4);
+			document.getElementById("map").innerHTML= '<font face="Island Moments" style="font-size:40px" align="center" color="white">'+data.getFormattedValue(num,4)+'</font>';
 			document.getElementById("maplink").innerHTML= '<iframe src="'+ data.getFormattedValue(num,5)+'" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>';
 		}
 		</script>
