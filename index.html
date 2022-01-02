@@ -64,8 +64,8 @@
 
       
 		<nav>
-		<div class="nav-wrapper" style="background-color: #555454;text-align: center">
-			<a href="#" class="brand-logo"><font face="Island Moments" style="font-size:80px" align="center">Harry Potter</font></a>
+		<div class="nav-wrapper" style="background-color:black;text-align: center">
+			<div class="center"><a href="#" class="brand-logo"><font face="Island Moments" style="font-size:80px" align="center">Harry Potter</font></a></div>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 			<!--<li><a href="sass.html">Sass</a></li>
 			<li><a href="badges.html">Components</a></li>
@@ -81,19 +81,24 @@
 		.divcss5{
 			margin:0 auto;
 			width:70%;
-			background-color:#FFFFE8;
+			background-color:#555454;
 		} 
 		.combon{
 			margin:0 auto;
 			width:70%;
-			background-color:#FFFFE8;
+			background-color:#555454;
 			text-align: center
 		}
+		.card-image{
+            background:  bidi-override;
+            height: 400px; /*固定圖片大小*/
+            overflow: hidden;
+          }  	 
 		</style>
       
 		<div class="row"  id="demo">
 		</div>
-		<div class="divcss5" style="background-color:#FFFFE8">
+		<div class="divcss5" style="background-color:#555454>
 			<div class="combon">
 				<h3>更多推薦電影</h3>
 			</div>
@@ -151,14 +156,8 @@
 		 text = text + '	<div class="card">';
 		 text = text + '		<div class="card-image">';
 		 text = text + '			<a href="https://lll1237html.netlify.app/test?id='+i+'"><img src="'+data.getFormattedValue(i,0)+'" width="100%">';
-		 //text = text + '     		<img src=' +cars[i] +'>';
-		 //text = text + '     		<span class="card-title, font-size:20px" style="font-family:fantasy; height:2em; padding:16px 16px;">'+cards[i]+'</span>';
-		 text = text + '     		<span class="card-title, font-size:20px" style="height:2em; padding:16px 16px;color:black;"><font face="Island Moments" color="blue" align="center">'+data.getFormattedValue(i,1)+'</span>';
+		 text = text + '     		<span class="card-title, font-size:20px" style="height:2em; padding:16px 16px;"><font face="Vujahday Script" color="white" align="center">'+data.getFormattedValue(i,1)+'</span>';
 		 text = text + '		</div> ';
-		 //text = text + '		<div class="card-action, font-size:10px" style="height:2em; padding:5px 5px;">';
-		 //text = text + '			<a class="indigo-text text-darken-3" href="description.html?id='+i+'">'+data.getFormattedValue(i,1)+'</a>';
-		 //text = text + '			<a href="https://lll1237html.netlify.app/test?id='+i+'" target = "_blank"></a>';
-		 //text = text + '		</div> ';
 		 text = text + '  	</div> ';
 		 text = text + '</div> ';
 		 }
@@ -173,7 +172,7 @@
 			for (i = 0; i < data.length; i++) {
 				if ( data[i].thumb != "" )
 				{
-					out = out + '<div class="col s1 m3 l3" style=" height:200px; border:1px #DBDB00 dashed; ">';
+					out = out + '<div class="col s1 m3 l3" style=" height:200px; border:1px #F0F0F0 dashed; ">';
 					out = out + ' <div class="pixnet" >';
 					out = out + '   <div class="pixnet-image">';
 					if ( data[i].thumb != "" ) out += '<img src="' + data[i].thumb + '" style="display:block; margin:auto;"/>';
@@ -193,19 +192,9 @@
 		<footer class="page-footer">
 		<div class="container">
 			<div class="row">
-				<!--<div class="col l6 s12">
-				<!--	<h5 class="white-text">我的好劇收藏</h5>
-				<!--	<p class="grey-text text-lighten-4">今年入坑陸劇 目前我認為值得一看得好劇們</p>
-				<!--</div>
-				<!--<div>
-				<!--	<img src="http://img.qutingting.com/202108/20/1049322911313.jpg" width="200" height="200" style="float:right" />
-				<!--</div>
-				<!--<div class="col l4 offset-l2 s12">-->
 				<div class="center">
-					<form name="form1" action="javascript:formresponse();" style="background-color:white;">
-						<font face="Vujahday Script">
-						留言: <br><input type="text" name="dcard"><br />
-						</font>
+					<form name="form1" action="javascript:formresponse();" style="background-color:#FFD306;">
+						留言: <br><input type="text" name="dcard" style="color:black"><br />
 						<input type="submit" value="Submit">
 					</form>
 				</div>
@@ -220,7 +209,7 @@
 			</div>
 		</div>       
 		<div class="footer-copyright">
-		<div class="container">
+		<div class="container" align="center">
 		© 2021 Copy NO right Text
 		</div>
 		</div>
