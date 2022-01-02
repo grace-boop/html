@@ -3,7 +3,7 @@
     <head>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Vujahday+Script&display=swap" rel="stylesheet">" rel="stylesheet">
 		<style>
 		body{
 		background-color:black
@@ -12,6 +12,7 @@
 		word-break: break-all;
 		}
 		font-family: 'Island Moments', cursive;
+		font-family: 'Vujahday Script', cursive;
 		</style>
 		<!--Import Google Icon Font-->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -30,7 +31,7 @@
     <body>
 	<nav>
      <div class="nav-wrapper" style="background-color: #555454" style = "text-align: center;">
-      <a href="#" class="brand-logo"><font face="Island Moments" style="font-size:80px" align="center">Harry Potter movies</font></a>
+      <a href="#" class="brand-logo"><font face="Island Moments" style="font-size:80px" align="center">Harry Potter</font></a>
 	  <ul id="nav-mobile" class="right hide-on-med-and-down">
         <!--<li><a href="sass.html">Sass</a></li>
         <li><a href="badges.html">Components</a></li>
@@ -72,11 +73,11 @@
 	</style>
 
 		<div id="pics" ></div>
-		<div class="center><h3 id="titles" style="background-color:black;color:white;"></h3><div>
+		<div class="center><h3 id="titles" style="background-color:black;color:white;"><font face="Island Moments" style="font-size:40px" align="center"></font></h3><div>
 		<p id="tests" class="sizes" style="background-color:#462E7D;color:white;"></p>
 		<div id="links" align="center" ></div>
-		<p id="map" style="background-color:#462E7D;color:white"></p>
-		<div id='maplink'></div>
+		<div class="center"><p id="map" style="background-color:#462E7D;color:white"><font face="Island Moments" style="font-size:40px" align="center"></font></p></div>
+		<div id='maplink' class="center"></div>
 		<!--<script> 
 		<!-- 表單的部分 ->
 		<!-- 利用Google Visualization讀取Google Sheet https://www.labnol.org/code/google-sheet-d3js-visualization-200608 -->
@@ -104,7 +105,7 @@
 			var rows = data.getNumberOfRows();
 
 			var num = Number(X); 
-			//document.getElementById("titles").innerHTML = data.getFormattedValue(num,1);
+			document.getElementById("titles").innerHTML = data.getFormattedValue(num,1);
 			document.getElementById("pics").innerHTML ='<img src="' + data.getFormattedValue(num,0) + '" style="display:block; margin:auto;"/>';
 			document.getElementById("tests").innerHTML = data.getFormattedValue(num,2);
 			document.getElementById("links").innerHTML='<iframe width="560" height="315" src="'+data.getFormattedValue(num,3)+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>';
@@ -113,5 +114,33 @@
 		}
 		</script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>
+		
+		<!--footer-->
+		<footer class="page-footer teal lighten-2">
+		<div class="container">
+			<div class="row">
+				<div class="center">
+					<form name="form1" action="javascript:formresponse();">
+						留言: <br><input type="text" name="dcard"><br />
+						<input type="submit" value="Submit">
+					</form>
+				</div>
+				<div class="center">
+					<h5 class="white-text">Links</h5>
+					<ul>
+						<li><a class="grey-text text-lighten-3" href="https://docs.google.com/spreadsheets/d/1w3sCX2bKNqC46lXlh5Hpv4_RgsuMoouXnb2fSRUx0Jo/edit?resourcekey#gid=1167725145" target="_blank"" target="_blank">record for chat</a></li>
+						<li><a class="grey-text text-lighten-3" href="https://docs.google.com/spreadsheets/d/19IQXAENU4BEnj5TrJ9s_4pI5tYq26jHftEuoZwP2D98/edit#gid=0" target="_blank">database</a></li>
+						<li><a class="grey-text text-lighten-3" href="https://kkkhtml123.blogspot.com/">blogger</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>       
+		<div class="footer-copyright">
+		<div class="container" align="center">
+		© 2021 Copy NO right Text
+		</div>
+		</div>
+		</footer>
+		
 	</body>
 </html>
