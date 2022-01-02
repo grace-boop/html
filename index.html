@@ -89,7 +89,7 @@
 			background-color:#555454;
 			text-align: center
 		}
-		<!--.card-image{
+		.card-image{
             background:  bidi-override;
             height: 400px; /*固定圖片大小*/
             overflow: hidden;
@@ -98,7 +98,7 @@
             background:  bidi-override;
             height: 150px; /*固定圖片大小*/
             overflow: hidden;
-          }-->  		  
+          }  		  
 		</style>
       
 		<div class="row"  id="demo">
@@ -158,12 +158,12 @@
 		var text ="";
 		for (i = 0;i <rows ; i++){
 		 text = text + '<div class="col s12 m3 l2">';
-		 text = text + '	<div class="card">';
+		 text = text + '	<div class="card" style="background-color:black">';
 		 text = text + '		<div class="card-image" style="background-color:black">';
 		 text = text + '			<a href="https://lll1237html.netlify.app/test?id='+i+'"><img src="'+data.getFormattedValue(i,0)+'" width="100%">';
 		 text = text + '		</div>';
 		 text = text + '		<div class="card-content>';
-		 text = text + '     		<span class="card-title, font-size:20px" style="height:2em; padding:16px 16px;"><font face="Vujahday Script" color="white" align="center">'+data.getFormattedValue(i,1)+'</span>';
+		 text = text + '     		<span class="card-title, font-size:20px" style="height:2em; padding:16px 16px;><font face="Vujahday Script" color="white" align="center">'+data.getFormattedValue(i,1)+'</span>';
 		 text = text + '		</div> ';
 		 text = text + '  	</div> ';
 		 text = text + '</div> ';
