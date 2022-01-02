@@ -37,34 +37,6 @@
       
       
     <script type="text/javascript">
-		
-		<!-- 表單的部分 ->
-      <!-- 利用Google Visualization讀取Google Sheet https://www.labnol.org/code/google-sheet-d3js-visualization-200608 -->
-      <script src="https://www.gstatic.com/charts/loader.js"></script>
-      
-      <script>
-        // https://developers.google.com/chart/interactive/docs/quick_start
-        // Load the Visualization API and the corechart package.
-        google.charts.load('current', {'packages':['corechart']});
-
-        // Set a callback to run when the Google Visualization API is loaded.	
-        google.charts.setOnLoadCallback(init);
-       
-        function init() {
-          // 這個例子使用的試算表是 https://docs.google.com/spreadsheets/d/1QScI5d56Kh-LGywY4WR6EvRGPcalFQYUAdqMxbFVDvk/copy
-          // 將上述試算表另存副本後，你要在自己的雲端硬碟將該試算表設定成[知道連結的使用者都能查看]。
-          // 然後讓程式讀取 https://docs.google.com/spreadsheets/d/瀏覽器網址列上的網址擷取序號部分/gviz/tq?sheet=工作表名稱
-          // 也就是將下列的 1QScI5d56Kh-LGywY4WR6EvRGPcalFQYUAdqMxbFVDvk 更換成自己的檔案序號，以及最後部分指讀取哪個工作表。
-          var url =
-            'https://docs.google.com/spreadsheets/d/19IQXAENU4BEnj5TrJ9s_4pI5tYq26jHftEuoZwP2D98/gviz/tq?sheet=工作表1';
-          var query = new google.visualization.Query(url);
-          query.setQuery('select *');
-          query.send(processSheetsData);
-        }
-		function processSheetsData(response) {
-        var data = response.getDataTable();
-        var columns = data.getNumberOfColumns();
-        var rows = data.getNumberOfRows();
 		function GetUrlVar(VarName) 
 		{
 		  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -101,14 +73,41 @@
 		<div id="links" align="center" ></div>
 		<p id="map" style="background-color:#462E7D;color:white"></p>
 		<div id='maplink'></div>
-		<script> 
+		<!--<script> 
+		<!-- 表單的部分 ->
+      <!-- 利用Google Visualization讀取Google Sheet https://www.labnol.org/code/google-sheet-d3js-visualization-200608 -->
+      <script src="https://www.gstatic.com/charts/loader.js"></script>
+      
+      <script>
+        // https://developers.google.com/chart/interactive/docs/quick_start
+        // Load the Visualization API and the corechart package.
+        google.charts.load('current', {'packages':['corechart']});
+
+        // Set a callback to run when the Google Visualization API is loaded.	
+        google.charts.setOnLoadCallback(init);
+       
+        function init() {
+          // 這個例子使用的試算表是 https://docs.google.com/spreadsheets/d/1QScI5d56Kh-LGywY4WR6EvRGPcalFQYUAdqMxbFVDvk/copy
+          // 將上述試算表另存副本後，你要在自己的雲端硬碟將該試算表設定成[知道連結的使用者都能查看]。
+          // 然後讓程式讀取 https://docs.google.com/spreadsheets/d/瀏覽器網址列上的網址擷取序號部分/gviz/tq?sheet=工作表名稱
+          // 也就是將下列的 1QScI5d56Kh-LGywY4WR6EvRGPcalFQYUAdqMxbFVDvk 更換成自己的檔案序號，以及最後部分指讀取哪個工作表。
+          var url =
+            'https://docs.google.com/spreadsheets/d/19IQXAENU4BEnj5TrJ9s_4pI5tYq26jHftEuoZwP2D98/gviz/tq?sheet=工作表1';
+          var query = new google.visualization.Query(url);
+          query.setQuery('select *');
+          query.send(processSheetsData);
+        }
+		function processSheetsData(response) {
+        var data = response.getDataTable();
+        var columns = data.getNumberOfColumns();
+        var rows = data.getNumberOfRows();
 		var num = Number(X); 
-		document.getElementById("titles").innerHTML = data.getFormattedValue(num,1);
+		document.getElementById("titles").innerHTML = data.getFormattedValue(num,0);
 		document.getElementById("pics").innerHTML ='<img src="' + data.getFormattedValue(num,1) + '" style="display:block; margin:auto;"/>';
 		document.getElementById("tests").innerHTML = data.getFormattedValue(num,2);
 		document.getElementById("links").innerHTML='<iframe width="560" height="315" src="'+data.getFormattedValue(num,3)+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>';
-		document.getElementById("map").innerHTML= maps[num];
-		document.getElementById("maplink").innerHTML= '<iframe src="'+mapslink[num]+'" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>';
+		document.getElementById("map").innerHTML= data.getFormattedValue(num,4);
+		document.getElementById("maplink").innerHTML= '<iframe src="'+ data.getFormattedValue(num,5)+'" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>';
 		</script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>
 	</body>
