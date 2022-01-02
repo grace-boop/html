@@ -141,9 +141,10 @@
 		 text = text + '<div class="col s12 m3 l2">';
 		 text = text + '	<div class="card">';
 		 text = text + '		<div class="card-image">';
-		 text = text + '			<a href="description.html?id='+i+'"> <img src="'+data.getFormattedValue(i,0)+'" width="100%">';
+		 text = text + '			<img src="'+data.getFormattedValue(i,0)+'" width="100%">';
 		 //text = text + '     		<img src=' +cars[i] +'>';
 		 //text = text + '     		<span class="card-title, font-size:20px" style="font-family:fantasy; height:2em; padding:16px 16px;">'+cards[i]+'</span>';
+		 text = text + '     		<span class="card-title, font-size:20px" style="font-family:fantasy; height:2em; padding:16px 16px;">'+data.getFormattedValue(i,1)+'</span>';
 		 text = text + '		</div> ';
 		 text = text + '		<div class="card-action, font-size:10px" style="height:2em; padding:5px 5px;">';
 		 text = text + '			<a class="indigo-text text-darken-3" href="description.html?id='+i+'">'+data.getFormattedValue(i,1)+'</a>';
