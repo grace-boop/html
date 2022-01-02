@@ -163,7 +163,7 @@
 		 text = text + '			<a href="https://lll1237html.netlify.app/test?id='+i+'"><img src="'+data.getFormattedValue(i,0)+'" width="100%">';
 		 text = text + '		</div>';
 		 text = text + '		<div class="card-content>';
-		 text = text + '     		<span class="card-title, font-size:20px" style="height:2em; padding:16px 16px;><font face="Vujahday Script" color="white" align="center">'+data.getFormattedValue(i,1)+'</span>';
+		 text = text + '     		<span class="card-title, font-size:10px" :2em; padding:16px 16px;><font face="Vujahday Script" color="white" align="center">'+data.getFormattedValue(i,1)+'</span>';
 		 text = text + '		</div> ';
 		 text = text + '  	</div> ';
 		 text = text + '</div> ';
@@ -179,7 +179,7 @@
 			for (i = 0; i < data.length; i++) {
 				if ( data[i].thumb != "" )
 				{
-					out = out + '<div class="col s1 m3 l3" style=" height:200px; border:1px #F0F0F0 dashed; ">';
+					out = out + '<div class="col s1 m3 l3" style="weight:70%;height:200px; border:1px #F0F0F0 dashed; ">';
 					out = out + ' <div class="pixnet" >';
 					out = out + '   <div class="pixnet-image">';
 					if ( data[i].thumb != "" ) out += '<img src="' + data[i].thumb + '" style="display:block; margin:auto;"/>';
