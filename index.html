@@ -2,6 +2,19 @@
 <!DOCTYPE html>
 <html>
     <head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Vujahday+Script&display=swap" rel="stylesheet">" rel="stylesheet">
+		<style>
+		body{
+		background-color:black
+		}
+		AutoNewline{
+		word-break: break-all;
+		}
+		font-family: 'Island Moments', cursive;
+		font-family: 'Vujahday Script', cursive;
+		</style>
 		<!--Import Google Icon Font-->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -31,9 +44,7 @@
 				var NewOpen = window.open(MySubmit);
 			}
 		}
-		//
-		
-		<!--<script>-->
+
 		var xmlhttp = new XMLHttpRequest();
 		var url = "https://emma.pixnet.cc/mainpage/blog/categories/hot/19?page=1&per_page=8&api_version=2&format=json";
 
@@ -46,9 +57,7 @@
 		xmlhttp.open("GET", url, true);
 		xmlhttp.send();		
 		</script>
-		<!--<script type="text/javascript" src="js/materialize.min.js"></script>-->
-		
-	  
+		<script type="text/javascript" src="js/materialize.min.js"></script>-->  
     </head>
 
     <body>
@@ -56,7 +65,7 @@
       
 		<nav>
 		<div class="nav-wrapper" style="background-color: #555454;text-align: center">
-			<a href="#" class="brand-logo" style="font-size:30px">哈利波特系列電影</a>
+			<a href="#" class="brand-logo"><font face="Island Moments" style="font-size:80px" align="center">Harry Potter</font></a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 			<!--<li><a href="sass.html">Sass</a></li>
 			<li><a href="badges.html">Components</a></li>
@@ -92,28 +101,28 @@
 		</div>
       
 		<!-- 表單的部分 ->
-      <!-- 利用Google Visualization讀取Google Sheet https://www.labnol.org/code/google-sheet-d3js-visualization-200608 -->
-      <script src="https://www.gstatic.com/charts/loader.js"></script>
-      
-      <script>
-        // https://developers.google.com/chart/interactive/docs/quick_start
-        // Load the Visualization API and the corechart package.
-        google.charts.load('current', {'packages':['corechart']});
+		<!-- 利用Google Visualization讀取Google Sheet https://www.labnol.org/code/google-sheet-d3js-visualization-200608 -->
+		<script src="https://www.gstatic.com/charts/loader.js"></script>
 
-        // Set a callback to run when the Google Visualization API is loaded.	
-        google.charts.setOnLoadCallback(init);
-       
-        function init() {
-          // 這個例子使用的試算表是 https://docs.google.com/spreadsheets/d/1QScI5d56Kh-LGywY4WR6EvRGPcalFQYUAdqMxbFVDvk/copy
-          // 將上述試算表另存副本後，你要在自己的雲端硬碟將該試算表設定成[知道連結的使用者都能查看]。
-          // 然後讓程式讀取 https://docs.google.com/spreadsheets/d/瀏覽器網址列上的網址擷取序號部分/gviz/tq?sheet=工作表名稱
-          // 也就是將下列的 1QScI5d56Kh-LGywY4WR6EvRGPcalFQYUAdqMxbFVDvk 更換成自己的檔案序號，以及最後部分指讀取哪個工作表。
-          var url =
-            'https://docs.google.com/spreadsheets/d/19IQXAENU4BEnj5TrJ9s_4pI5tYq26jHftEuoZwP2D98/gviz/tq?sheet=工作表1';
-          var query = new google.visualization.Query(url);
-          query.setQuery('select *');
-          query.send(processSheetsData);
-        }
+		<script>
+		// https://developers.google.com/chart/interactive/docs/quick_start
+		// Load the Visualization API and the corechart package.
+		google.charts.load('current', {'packages':['corechart']});
+
+		// Set a callback to run when the Google Visualization API is loaded.	
+		google.charts.setOnLoadCallback(init);
+
+		function init() {
+		// 這個例子使用的試算表是 https://docs.google.com/spreadsheets/d/1QScI5d56Kh-LGywY4WR6EvRGPcalFQYUAdqMxbFVDvk/copy
+		// 將上述試算表另存副本後，你要在自己的雲端硬碟將該試算表設定成[知道連結的使用者都能查看]。
+		// 然後讓程式讀取 https://docs.google.com/spreadsheets/d/瀏覽器網址列上的網址擷取序號部分/gviz/tq?sheet=工作表名稱
+		// 也就是將下列的 1QScI5d56Kh-LGywY4WR6EvRGPcalFQYUAdqMxbFVDvk 更換成自己的檔案序號，以及最後部分指讀取哪個工作表。
+		var url =
+		'https://docs.google.com/spreadsheets/d/19IQXAENU4BEnj5TrJ9s_4pI5tYq26jHftEuoZwP2D98/gviz/tq?sheet=工作表1';
+		var query = new google.visualization.Query(url);
+		query.setQuery('select *');
+		query.send(processSheetsData);
+		}
 		//cars = ["https://cdn.europosters.eu/image/1300/posters/harry-potter-and-the-sorcerers-stone-i83426.jpg",
 		//		"https://i0.wp.com/image.tmdb.org/t/p/original/csOv5H7R2zdnKaYuTrGVWohmo8d.jpg",
 		//		"https://i.pinimg.com/736x/c4/54/01/c454011dd7be6d0129f25932d3bc0c36.jpg",
@@ -144,12 +153,12 @@
 		 text = text + '			<a href="https://lll1237html.netlify.app/test?id='+i+'"><img src="'+data.getFormattedValue(i,0)+'" width="100%">';
 		 //text = text + '     		<img src=' +cars[i] +'>';
 		 //text = text + '     		<span class="card-title, font-size:20px" style="font-family:fantasy; height:2em; padding:16px 16px;">'+cards[i]+'</span>';
-		 text = text + '     		<span class="card-title, font-size:20px" style="font-family:fantasy; height:2em; padding:16px 16px;">'+data.getFormattedValue(i,1)+'</span>';
+		 text = text + '     		<span class="card-title, font-size:20px" style="height:2em; padding:16px 16px;color:black;"><font face="Island Moments" color="blue" align="center">'+data.getFormattedValue(i,1)+'</span>';
 		 text = text + '		</div> ';
-		 text = text + '		<div class="card-action, font-size:10px" style="height:2em; padding:5px 5px;">';
+		 //text = text + '		<div class="card-action, font-size:10px" style="height:2em; padding:5px 5px;">';
 		 //text = text + '			<a class="indigo-text text-darken-3" href="description.html?id='+i+'">'+data.getFormattedValue(i,1)+'</a>';
 		 //text = text + '			<a href="https://lll1237html.netlify.app/test?id='+i+'" target = "_blank"></a>';
-		 text = text + '		</div> ';
+		 //text = text + '		</div> ';
 		 text = text + '  	</div> ';
 		 text = text + '</div> ';
 		 }
@@ -180,11 +189,42 @@
 			document.getElementById("pixnet-stuff").innerHTML = out;
 		}
 		</script>
-		
-		<form name="form1" action="javascript:formresponse();" style="background-color:white;">
-			留言: <input type="text" name="dcard"><br />
-			<input type="submit" value="Submit">
-		</form>
+		<!--footer-->
+		<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<!--<div class="col l6 s12">
+				<!--	<h5 class="white-text">我的好劇收藏</h5>
+				<!--	<p class="grey-text text-lighten-4">今年入坑陸劇 目前我認為值得一看得好劇們</p>
+				<!--</div>
+				<!--<div>
+				<!--	<img src="http://img.qutingting.com/202108/20/1049322911313.jpg" width="200" height="200" style="float:right" />
+				<!--</div>
+				<!--<div class="col l4 offset-l2 s12">-->
+				<div class="center">
+					<form name="form1" action="javascript:formresponse();" style="background-color:white;">
+						<font face="Vujahday Script">
+						留言: <br><input type="text" name="dcard"><br />
+						</font>
+						<input type="submit" value="Submit">
+					</form>
+				</div>
+				<div class="center">
+					<h5 class="white-text">Links</h5>
+					<ul>
+						<li><a class="grey-text text-lighten-3" href="https://movie.douban.com/" target="_blank">record for chat</a></li>
+						<li><a class="grey-text text-lighten-3" href="https://docs.google.com/spreadsheets/d/19IQXAENU4BEnj5TrJ9s_4pI5tYq26jHftEuoZwP2D98/edit#gid=0" target="_blank">database</a></li>
+						<li><a class="grey-text text-lighten-3" href="https://docs.google.com/spreadsheets/d/1w3sCX2bKNqC46lXlh5Hpv4_RgsuMoouXnb2fSRUx0Jo/edit?resourcekey#gid=1167725145" target="_blank">blogger</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>       
+		<div class="footer-copyright">
+		<div class="container">
+		© 2021 Copy NO right Text
+		</div>
+		</div>
+		</footer>
 		
 		
       
