@@ -187,11 +187,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="center">
-					<form name="form1" action="javascript:formresponse();">
+					<form name="form1" action="javascript:formresponse();" method="post" target="hideIframe">
 					<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 					<i class="material-icons">chat</i><br><input type="text" name="dcard"><br />
 						<input type="submit" value="Submit">
 					</form>
+					<iframe id="myIframe" name="hideIframe" style="display:none;"></iframe>
 				</div>
 				<div class="center">
 					<!--<h5 class="white-text">Links</h5>-->
