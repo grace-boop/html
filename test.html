@@ -87,7 +87,7 @@
 	.pick
 	{
         <!--background:  bidi-override;-->
-		weight:70%;
+		weight:50%;
         <!--overflow: hidden;-->
     } 
 	font-family: 'Island Moments', cursive;
@@ -127,7 +127,7 @@
 			var rows = data.getNumberOfRows();
 
 			var num = Number(X); 
-			document.getElementById("pics").innerHTML ='<img src="' + data.getFormattedValue(num,0) + '" style="display:block; margin:auto; width=50%"/>';
+			document.getElementById("pics").innerHTML ='<img src="' + data.getFormattedValue(num,0) + '" style="display:block; margin:auto; width=30%"/>';
 			document.getElementById("titles").innerHTML = '<font face="Island Moments" style="font-size:40px" align="center" color="white">'+data.getFormattedValue(num,1)+'</font>';
 			document.getElementById("tests").innerHTML = data.getFormattedValue(num,2);
 			document.getElementById("links").innerHTML='<iframe width="560" height="315" src="'+data.getFormattedValue(num,3)+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>';
